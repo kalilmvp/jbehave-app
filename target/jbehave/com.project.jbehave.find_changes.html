@@ -8,11 +8,54 @@
 </div>
 <div class="scenario">
 <h2>Scenario: One Coin changes</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given a change machine</div>
+<div class="step">When i ask for a change of &lt;value&gt;</div>
+<div class="step">Then it returns the &lt;coin&gt; coin</div>
+<table>
+<thead>
+<tr>
+<th>value</th><th>coin</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>0.01</td><td>1c</td></tr>
+<tr>
+<td>0.05</td><td>5c</td></tr>
+<tr>
+<td>0.10</td><td>10c</td></tr>
+<tr>
+<td>0.25</td><td>25c</td></tr>
+<tr>
+<td>0.50</td><td>50c</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {value=0.01, coin=1c}</h3>
 <div class="step successful">Given a change machine</div>
 <div class="step successful">When i ask for a change of <span class="step parameter">0.01</span></div>
 <div class="step successful">Then it returns the <span class="step parameter">1c</span> coin</div>
+
+<h3 class="example">Example: {value=0.05, coin=5c}</h3>
 <div class="step successful">Given a change machine</div>
 <div class="step successful">When i ask for a change of <span class="step parameter">0.05</span></div>
 <div class="step successful">Then it returns the <span class="step parameter">5c</span> coin</div>
+
+<h3 class="example">Example: {value=0.10, coin=10c}</h3>
+<div class="step successful">Given a change machine</div>
+<div class="step successful">When i ask for a change of <span class="step parameter">0.10</span></div>
+<div class="step successful">Then it returns the <span class="step parameter">10c</span> coin</div>
+
+<h3 class="example">Example: {value=0.25, coin=25c}</h3>
+<div class="step successful">Given a change machine</div>
+<div class="step successful">When i ask for a change of <span class="step parameter">0.25</span></div>
+<div class="step successful">Then it returns the <span class="step parameter">25c</span> coin</div>
+
+<h3 class="example">Example: {value=0.50, coin=50c}</h3>
+<div class="step successful">Given a change machine</div>
+<div class="step successful">When i ask for a change of <span class="step parameter">0.50</span></div>
+<div class="step successful">Then it returns the <span class="step parameter">50c</span> coin</div>
+</div>
 </div>
 </div>

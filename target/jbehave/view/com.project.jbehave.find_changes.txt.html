@@ -15,12 +15,43 @@ In order to give small changes
 As a change machine
 I want to give the small number of coins for an amount of money
 Scenario: One Coin changes
+Examples:
+Given a change machine
+When i ask for a change of <value>
+Then it returns the <coin> coin
+
+|value|coin|
+|0.01|1c|
+|0.05|5c|
+|0.10|10c|
+|0.25|25c|
+|0.50|50c|
+
+Example: {value=0.01, coin=1c}
 Given a change machine
 When i ask for a change of 0.01
 Then it returns the 1c coin
+
+Example: {value=0.05, coin=5c}
 Given a change machine
 When i ask for a change of 0.05
 Then it returns the 5c coin
+
+Example: {value=0.10, coin=10c}
+Given a change machine
+When i ask for a change of 0.10
+Then it returns the 10c coin
+
+Example: {value=0.25, coin=25c}
+Given a change machine
+When i ask for a change of 0.25
+Then it returns the 25c coin
+
+Example: {value=0.50, coin=50c}
+Given a change machine
+When i ask for a change of 0.50
+Then it returns the 50c coin
+
 
 
 
