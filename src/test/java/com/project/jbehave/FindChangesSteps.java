@@ -1,9 +1,6 @@
 package com.project.jbehave;
 
-
-
-import static junit.framework.Assert.assertNotNull;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.List;
 
@@ -21,7 +18,10 @@ public class FindChangesSteps {
 	
 	@Given("a change machine")
 	public void creteChangeMachine() {
+		//inicializacao dos objetos
 		this.changeMachine = new ChangeMachine();
+		change = null;
+		exception = null;
 	}
 	
 	@When("i ask for a change of <value>")

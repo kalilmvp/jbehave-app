@@ -57,6 +57,9 @@ Scenario: Only coin changes
 Given a change machine
 When i ask for a change of 1.00
 Then it will raise an error
+Given a change machine
+When i ask for a change of -0.10
+Then it will raise an error
 
 
 

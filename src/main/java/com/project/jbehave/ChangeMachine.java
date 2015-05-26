@@ -6,7 +6,7 @@ import java.util.List;
 public class ChangeMachine {
 
 	public List<Integer> getCoinsForChangeOf(double value) {
-		if (value >= 1) {
+		if (value >= 1 || value <= 0) {
 			throw new RuntimeException();
 		}
 		List<Integer> coins = new ArrayList<Integer>();
