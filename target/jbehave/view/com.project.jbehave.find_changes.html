@@ -17,14 +17,8 @@
 <div class="scenario">
 <h2>Scenario: One Coin changes</h2>
 <div class="step successful">Given a change machine</div>
-<div class="step pending">When i ask for a change of 0.01 <span class="keyword pending">(PENDING)</span></div>
-<div class="step notPerformed">Then it returns the <span class="step parameter">1c</span> coin <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
-<div><pre class="pending">@When(&quot;i ask for a change of 0.01&quot;)
-@Pending
-public void whenIAskForAChangeOf001() {
-  // PENDING
-}
-</pre></div>
+<div class="step successful">When i ask for a change of <span class="step parameter">0.01</span></div>
+<div class="step successful">Then it returns the <span class="step parameter">1c</span> coin</div>
 </div>
 </div>
 

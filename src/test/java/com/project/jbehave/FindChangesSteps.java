@@ -23,7 +23,7 @@ public class FindChangesSteps {
 	}
 	
 	@When("i ask for a change of <value>")
-	@Alias("I ask for a change of $value")
+	@Alias("i ask for a change of $value")
 	public void changeFor(@Named("value") double value) {
 		this.change = this.changeMachine.getCoinsForChangeOf(value);
 	}

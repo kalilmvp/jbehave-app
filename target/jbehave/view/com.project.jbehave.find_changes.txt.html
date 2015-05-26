@@ -16,14 +16,8 @@ As a change machine
 I want to give the small number of coins for an amount of money
 Scenario: One Coin changes
 Given a change machine
-When i ask for a change of 0.01 (PENDING)
-Then it returns the 1c coin (NOT PERFORMED)
-@When("i ask for a change of 0.01")
-@Pending
-public void whenIAskForAChangeOf001() {
-  // PENDING
-}
-
+When i ask for a change of 0.01
+Then it returns the 1c coin
 
 
 
