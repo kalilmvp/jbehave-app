@@ -37,7 +37,16 @@ public class FindChangesSteps {
 	@Then("it returns the <coin> coin")
 	@Alias("it returns the $coin coin")
 	public void changeCoins(@Named("coin") String coins) {
-		assertEquals(this.change.get(0) + "c", coins);
+		String expected = "";
+		
+		for (int i = 0; i < this.change.size(); i++) {
+			expected += this.change.get(i) + "c";
+			if (i != this.change.size() - 1) {
+				expected += ",";
+			}
+		}
+		
+		assertEquals(coins, expected);
 	}
 	
 	@Then("it will raise an error")

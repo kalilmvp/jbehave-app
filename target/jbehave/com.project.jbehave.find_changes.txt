@@ -51,4 +51,70 @@ Given a change machine
 When i ask for a change of -0.10
 Then it will raise an error
 
+Scenario: More than one coin, but same type
+Examples:
+Given a change machine
+When i ask for a change of <value>
+Then it returns the <coin> coin
+
+|value|coin|
+|0.02|1c,1c|
+|0.03|1c,1c,1c|
+|0.20|10c,10c|
+
+Example: {value=0.02, coin=1c,1c}
+Given a change machine
+When i ask for a change of 0.02
+Then it returns the 1c,1c coin
+
+Example: {value=0.03, coin=1c,1c,1c}
+Given a change machine
+When i ask for a change of 0.03
+Then it returns the 1c,1c,1c coin
+
+Example: {value=0.20, coin=10c,10c}
+Given a change machine
+When i ask for a change of 0.20
+Then it returns the 10c,10c coin
+
+
+Scenario: Mixed coin types
+Examples:
+Given a change machine
+When i ask for a change of <value>
+Then it returns the <coin> coin
+
+|value|coin|
+|0.06|5c,1c|
+|0.17|10c,5c,1c,1c|
+|0.29|25c,1c,1c,1c,1c|
+|0.38|25c,10c,1c,1c,1c|
+|0.96|50c,25c,10c,10c,1c|
+
+Example: {value=0.06, coin=5c,1c}
+Given a change machine
+When i ask for a change of 0.06
+Then it returns the 5c,1c coin
+
+Example: {value=0.17, coin=10c,5c,1c,1c}
+Given a change machine
+When i ask for a change of 0.17
+Then it returns the 10c,5c,1c,1c coin
+
+Example: {value=0.29, coin=25c,1c,1c,1c,1c}
+Given a change machine
+When i ask for a change of 0.29
+Then it returns the 25c,1c,1c,1c,1c coin
+
+Example: {value=0.38, coin=25c,10c,1c,1c,1c}
+Given a change machine
+When i ask for a change of 0.38
+Then it returns the 25c,10c,1c,1c,1c coin
+
+Example: {value=0.96, coin=50c,25c,10c,10c,1c}
+Given a change machine
+When i ask for a change of 0.96
+Then it returns the 50c,25c,10c,10c,1c coin
+
+
 
