@@ -20,5 +20,5 @@ Examples:
 Scenario: Only coin changes
 
 Given a change machine
-When i ask for change of 1.00
+When i ask for a change of 1.00
 Then it will raise an error

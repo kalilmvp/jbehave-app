@@ -2,6 +2,7 @@ package com.project.jbehave;
 
 
 
+import static junit.framework.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class FindChangesSteps {
 	
 	private ChangeMachine changeMachine = null;
 	private List<Integer> change = null;
+	Exception exception = null;
 	
 	@Given("a change machine")
 	public void creteChangeMachine() {
@@ -25,12 +27,21 @@ public class FindChangesSteps {
 	@When("i ask for a change of <value>")
 	@Alias("i ask for a change of $value")
 	public void changeFor(@Named("value") double value) {
-		this.change = this.changeMachine.getCoinsForChangeOf(value);
+		try {
+			this.change = this.changeMachine.getCoinsForChangeOf(value);
+		} catch (Exception e) {
+			exception = e;
+		}
 	}
 	
 	@Then("it returns the <coin> coin")
 	@Alias("it returns the $coin coin")
 	public void changeCoins(@Named("coin") String coins) {
 		assertEquals(this.change.get(0) + "c", coins);
+	}
+	
+	@Then("it will raise an error")
+	public void raiseError() {
+		assertNotNull(exception);
 	}
 }

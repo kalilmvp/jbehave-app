@@ -6,6 +6,9 @@ import java.util.List;
 public class ChangeMachine {
 
 	public List<Integer> getCoinsForChangeOf(double value) {
+		if (value >= 1) {
+			throw new RuntimeException();
+		}
 		List<Integer> coins = new ArrayList<Integer>();
 		
 		coins.add((int)(value * 100));
