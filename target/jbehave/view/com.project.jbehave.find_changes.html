@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>com.project.jbehave.find_changes</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">com/project/jbehave/find_changes.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> give small changes</div>
+<div class="element asA"><span class="keyword asA">As a</span> change machine</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> give the small number of coins for an amount of money</div>
+</div>
+<div class="scenario">
+<h2>Scenario: One Coin changes</h2>
+<div class="step successful">Given a change machine</div>
+<div class="step pending">When i ask for a change of 0.01 <span class="keyword pending">(PENDING)</span></div>
+<div class="step notPerformed">Then it returns the <span class="step parameter">1c</span> coin <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<div><pre class="pending">@When(&quot;i ask for a change of 0.01&quot;)
+@Pending
+public void whenIAskForAChangeOf001() {
+  // PENDING
+}
+</pre></div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

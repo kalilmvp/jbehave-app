@@ -1,0 +1,18 @@
+
+(com/project/jbehave/find_changes.story)
+Narrative:
+In order to give small changes
+As a change machine
+I want to give the small number of coins for an amount of money
+Scenario: One Coin changes
+Given a change machine
+When i ask for a change of 0.01 (PENDING)
+Then it returns the 1c coin (NOT PERFORMED)
+@When("i ask for a change of 0.01")
+@Pending
+public void whenIAskForAChangeOf001() {
+  // PENDING
+}
+
+
+

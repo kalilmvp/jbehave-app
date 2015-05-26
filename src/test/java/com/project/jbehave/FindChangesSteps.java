@@ -1,8 +1,10 @@
 package com.project.jbehave;
 
-import java.util.List;
 
-import static junit.framework.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
 
 import org.jbehave.core.annotations.Alias;
 import org.jbehave.core.annotations.Given;
