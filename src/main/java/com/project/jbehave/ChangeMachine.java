@@ -8,7 +8,7 @@ public class ChangeMachine {
 	public List<Integer> getCoinsForChangeOf(double value) {
 		List<Integer> coins = new ArrayList<Integer>();
 		
-		coins.add(1);
+		coins.add((int)(value * 100));
 		
 		return coins;
 	}
