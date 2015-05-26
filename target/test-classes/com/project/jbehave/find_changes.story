@@ -16,3 +16,9 @@ Examples:
 |0.10|10c|
 |0.25|25c|
 |0.50|50c|
+
+Scenario: Only coin changes
+
+Given a change machine
+When i ask for change of 1.00
+Then it will raise an error
